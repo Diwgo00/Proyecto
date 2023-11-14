@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logopag-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+
+    <style>
+        #A4::before {
+            width: 100%;
+        }
+        #A4{
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 3px rgb(5, 211, 138);
+        }
+    </style>
+</head>
+<body>
+    <div id="MainForm">    
+        <div class="efecto-blur"></div>    
+
+        <div class="Contenedor-main ">
+            <header>  
+                <div class="menu">
+                    <div class="titulo">
+                        <H1>PROYECTO FINAL</H1>
+                        <h2>RECURSOS INFORMÁTICOS</h2> 
+                    </div>
+                    <div class="wtf">
+                        <img src="multimedia/LogoProm.png" alt="" id="logo">
+        
+                        <nav>
+                            <ul>
+                                <li class="Linkk" id="A1"> <a href="Main.html">Inicio</a></li> 
+                                <li class="Linkk" id="A2"> <a href="Lugares.html">Lugares</a></li>
+                                <li class="Linkk" id="A3"> <a href="Aprendizaje.html">Aprendizaje</a></li>
+                                <li class="Linkk" id="A4" > <a href="Contacto.html"> Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                </div>
+            </header>
+    
+            
+            <div id="BloqF">
+                <div id="Contacto">
+                    <form name="Contacto">
+                        <h2 class="centrado"><Label>Formulario de Contacto</Label> <br><br></h2>
+                        
+                        <div class="Eforms">
+                            <label for="">Nombre: </label><Input type="text" name="Nombre" id="Input1" oninput="Reset(this.value, this.id)"></Input> <br> 
+                            <p id="Error1" class="Error"></p><br>
+                            
+                            <label for="">Edad: </label> <input type="number" name="Edad" id="Input2" oninput="Reset(this.value, this.id); ValidarNeg(this.value) "> <br>
+                            <p id="Error2" class="Error"></p> <br>
+    
+                            <label for="">Email: </label> <input type="email" name="Email" id="Input3" oninput="Reset(this.value, this.id)"> <br>
+                            <p id="Error3" class="Error"></p> <br>
+                        </div>
+                            
+                        <div class="Eforms" style="padding-left: 70px;">
+                            <label for="">Motivo: </label> <br>
+                            <p id="Error4" class="Error" style="float: left;"></p> <br>
+                            <div id="Motivos">
+                                <label for="">Error 
+                                    <input type="radio" name="Input4" id="Error" oninput="Reset(this.value, this.name)">
+                                </label> <br>
+                    
+                                <label for="">Donacion
+                                    <input type="radio" name="Input4" id="Donacion" oninput="Reset(this.value, this.name)">
+                                </label> <br>
+                                
+                                <label for="">Otro
+                                    <input type="radio" name="Input4" id="Otro" oninput="Reset(this.value, this.name)">
+                                </label> <br><br>
+                            </div>
+                            
+                        </div>
+                        
+                        <button type="reset">Borrar</button> 
+                        <button type="Button" onclick="Validar()" id="Enviar">Enviar</button>
+    
+                        <div id="MsgForm">
+                            <p>Por favor llena el Formulario solo si deseas comunicarte con el dueño de la página</p>
+                        </div>
+                    </form>
+    
+                </div>
+                    <img style="display: block; width: 32%; height: auto;" src="multimedia/image-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <footer>Diego Contreras 12C</footer>
+<script>
+    function Validar() {
+        let Nom = document.Contacto.Nombre.value;
+        let Edad = document.Contacto.Edad.value;
+        let Email = document.Contacto.Email.value;
+        let Motivo = document.Contacto.Input4.value;
+
+        const MError = ("Este campo es obligatorio");
+
+        if (Nom == 0) {
+            document.getElementById("Error1").textContent = MError;
+            document.Contacto.Nombre.focus();
+        } 
+        if (Edad == 0 ){
+            document.getElementById("Error2").textContent = MError;
+            document.Contacto.Edad.focus();
+        } else if (Edad < 18){
+            Edad = 0;
+            alert("Debe ser mayor de edad")
+            document.Contacto.Edad.focus();
+        }
+        if (Email == 0){
+            document.getElementById("Error3").textContent = MError;
+            document.Contacto.Email.focus();
+        } 
+        if (Motivo == 0) {
+            document.getElementById("Error4").textContent = MError;
+            document.Contacto.Motivo.focus();
+        } 
+        
+        if (Nom != 0 && Edad != 0 && Motivo != 0 && Email != 0) {
+            document.Contacto.submit();
+            alert("Se ha enviado correctamente");
+            return 0;
+        }
+    }
+
+    function Reset(Valor, IdInput) {
+        let IdError = "Error" + IdInput.substring(5);
+        if (Valor != 0 ) 
+            document.getElementById(IdError).textContent = ""; 
+    }
+
+    function ValidarNeg(Valor) {
+        if (Valor < 1)
+            document.Contacto.Edad.value = 1;   
+    }
+
+</script>
+
+</body>
+</html>

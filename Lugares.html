@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logopag-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+
+    <style>
+        #A2::before {
+            width: 100%;
+        }
+        #A2{
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 3px rgb(65, 211, 138);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="fondo" onclick="cerrar()"></div>
+
+    <div id="CajaImGrande">
+        <img src="Carrusel/1.jpeg" id="imagenGrande" alt="">
+    </div>
+
+    <div style="background-image: url(Backgrounds/IMG_2414.jpg); background-size: cover; height: 110vh; z-index: 5";>
+        
+        <div class="efecto-blur"></div>
+
+        <div class="Contenedor-main">
+            <header>  
+                <div class="menu">
+                    <div class="titulo">
+                        <H1>PROYECTO FINAL</H1>
+                        <h2>RECURSOS INFORMÁTICOS</h2> 
+                    </div>
+        
+                    <img src="multimedia/LogoProm.png" alt="" id="logo">
+        
+                    <nav>
+                        <ul>
+                            <li class="Linkk" id="A1"> <a href="Main.html">Inicio</a></li> 
+                            <li class="Linkk" id="A2"> <a href="Lugares.html">Lugares</a></li>
+                            <li class="Linkk" id="A3"> <a href="Aprendizaje.html">Aprendizaje</a></li>
+                            <li class="Linkk" id="A4" > <a href="Contacto.html"> Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+    
+            <div class="BloqueGal">
+                <H1 class="espacio2">Lugares que <div> visitamos en la</div> <div style="color: rgb(0, 175, 21)";>Gira Académica</div></H1>
+                <div style="margin-top: 20px;">
+                    <p class="espacio" >En la Gira Educativa visitamos cuatro sitios, que cada uno 
+                        entra al menos en una de las siguientes categorías museos, sitios historicos 
+                        o edificios gubernamentales, estos sitios fueron:
+                        <ul id="Cansado">
+                            <li>
+                                Biomuseo
+                            </li>
+
+                            <li>
+                                Cancillería
+                            </li>
+
+                            <li>
+                                Panamá la vieja
+                            </li>
+                            <li>
+                                Esclusas de Miraflores
+                            </li>
+                        </ul>
+                    </p>
+                </div>      
+            </div>    
+            
+            <div style="display: flex; flex-direction: row;">
+                <div class="ContenidoCaja"  >
+                    <div id="Mensaje" onclick="mostrar()"><p style="bottom: 10px; position: absolute;">Presiona para hacer zoom</p></div>
+                    <div style="display: flex; transition: transform 0.5s ease-in-out;" id="imagenes">
+                        
+                        <!--Son 18 imagenes para que coincida con la variable cant tendría que cambiarle el nombre
+                        a las imagenes porque comienzan desde 1 y no desde 0, me da pereza :8 --> 
+                        <img src="Carrusel/1.jpeg">
+                        <img src="Carrusel/2.jpeg">
+                        <img src="Carrusel/3.jpeg" alt="">
+                        <img src="Carrusel/4.jpeg" alt="">
+                        <img src="Carrusel/5.jpeg" alt="">
+                        <img src="Carrusel/6.jpeg" alt="">
+                        <img src="Carrusel/7.jpeg" alt="">
+                        <img src="Carrusel/8.jpeg" alt="">
+                        <img src="Carrusel/9.jpeg" alt="">
+                        <img src="Carrusel/10.jpeg" alt="">
+                        <img src="Carrusel/11.jpeg" alt="">
+                        <img src="Carrusel/12.jpeg" alt="">
+                        <img src="Carrusel/13.jpeg" alt="">
+                        <img src="Carrusel/14.jpeg" alt="">
+                        <img src="Carrusel/15.jpeg" alt="">
+                        <img src="Carrusel/16.jpeg" alt="">
+                        <img src="Carrusel/17.jpeg" alt="">
+                        <img src="Carrusel/18.jpeg" alt="">
+                        <img src="Carrusel/19.jpg" alt="">
+                    </div>
+    
+                    <div id="control-caja">
+                        <button class="control-button" onclick="anterior()">Anterior</button>
+                        <button class="control-button" onclick="siguiente()">Siguiente</button>
+                    </div>
+                </div>
+                <p id="ImagenMos">Galería</p>
+            </div>
+        </div>            
+    </div>  
+
+    <div id="abajo">
+            <a href="https://mire.gob.pa/ministerio/">
+                <div class="relative">
+                    <img src="Backgrounds/Lugares/IMG_2272.jpg" alt="" class="FondoL">
+                    <div class="Texto">Cancillería</div>
+                </div>
+            </a>
+        
+                
+            <a href="https://biomuseo.org/">
+                <div class="relative">
+                    <img src="Backgrounds/Lugares/WhatsApp Image 2023-10-04 at 5.03.54 PM (1).jpeg"alt="" class="FondoL">
+                    <div class="Texto">Biomuseo</div>
+                </div>
+            </a>
+        
+        
+            <a href="https://www.panamaviejaescuela.com/historia-fundacion-primera-ciudad-panama/">
+                <div class="relative">
+                    <img src="Backgrounds/Lugares/WhatsApp Image 2023-10-04 at 6.06.32 PM.jpeg" alt=""class="FondoL">
+                    <div class="Texto">Panamá La Vieja</div>
+                </div>
+            </a>
+        
+            <a href="https://pancanal.com/">
+                <div class="relative">
+                    <img src="Backgrounds/Lugares/CanalBackG.jpeg" alt="" class="FondoL">
+                    <div class="Texto">Esclusas de Miraflores</div>
+                </div>
+            </a>
+
+            <footer>Diego Contreras 12C</footer>
+    </div>
+
+            <script>
+                var imagenAct = 0;
+                const imagen = document.getElementById('imagenes');
+                const Cant = 18
+                var imGr =  document.getElementById("CajaImGrande");
+                var fondo = document.getElementById("fondo");
+                var abajo =  document.getElementById("abajo")
+                let timer;
+
+                function anterior() {
+                    imagenAct--;
+                    if (imagenAct<0){
+                        imagenAct = Cant;
+                    }
+                    cambiar();
+                    resetTimer();
+                }
+
+                function siguiente() {
+                    imagenAct++;
+                    if (imagenAct>Cant) 
+                        imagenAct = 0;
+                    cambiar();
+                    resetTimer();
+                }
+
+                function cambiar() {
+                    const desplazamiento = -imagenAct * 100;
+                    imagen.style.transform = `translateX(${desplazamiento}%)`;
+                }
+
+
+                function mostrar(){
+                    document.getElementById("imagenGrande").src = "/Carrusel/"+(imagenAct+1)+".jpeg";
+                    document.getElementById("CajaImGrande").focus();
+                    imGr.style.display = "block";
+                    fondo.style.display = "block";
+                    abajo.style.position = "fixed";
+                }
+                
+                function resetTimer() {
+                    clearInterval(timer);
+                    timer = setInterval(siguiente, 3600); 
+                }
+
+                function cerrar() {
+                    imGr.style.display = "none";
+                    fondo.style.display = "none";
+                    abajo.style.position = "static";               
+                }
+                resetTimer(); 
+            </script>
+    
+</body>
+</html>
