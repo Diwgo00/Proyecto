@@ -187,6 +187,7 @@
                     imGr.style.display = "block";
                     fondo.style.display = "block";
                     abajo.style.position = "fixed";
+                    clearInterval(timer);
                 }
                 
                 function resetTimer() {
@@ -197,7 +198,8 @@
                 function cerrar() {
                     imGr.style.display = "none";
                     fondo.style.display = "none";
-                    abajo.style.position = "static";               
+                    abajo.style.position = "static";      
+                    resetTimer();         
                 }
                 resetTimer(); 
             </script>
